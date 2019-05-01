@@ -284,6 +284,10 @@ func CreateVersion(browser, version string) string {
 	os := data.DefaultOS
 	osAttribs := DefaultOSAttributes[os]
 
+	if version == "38" {
+		return "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.67 Safari/537.36"
+	}
+
 	return createFromDetails(
 		browser,
 		version,
